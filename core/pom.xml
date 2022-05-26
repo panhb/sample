@@ -15,6 +15,8 @@
         <hutool-all.version>5.8.1</hutool-all.version>
         <pdfbox.version>3.0.0-alpha3</pdfbox.version>
         <guava.version>31.1-jre</guava.version>
+        <itext7-core.version>7.1.12</itext7-core.version>
+        <itextpdf-html2pdf.version>2.1.5</itextpdf-html2pdf.version>
     </properties>
 
     <dependencies>
@@ -32,6 +34,17 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itext7-core</artifactId>
+            <version>${itext7-core.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>html2pdf</artifactId>
+            <version>${itextpdf-html2pdf.version}</version>
         </dependency>
     </dependencies>
 

@@ -73,8 +73,8 @@ public class PdfToImageByPdfbox extends AbstractConvertFile {
     }
 
     public static void main(String[] args) {
-        AbstractConvertFile pdfToImage = new PdfToImageByPdfbox();
-        List<byte[]> destList = pdfToImage.convert(FileUtil.readBytes("C:\\Users\\hongbo.pan\\Desktop\\0922.pdf"));
+        AbstractConvertFile pdfToImageByPdfbox = new PdfToImageByPdfbox();
+        List<byte[]> destList = pdfToImageByPdfbox.convert(FileUtil.readBytes("C:\\Users\\hongbo.pan\\Desktop\\0922.pdf"));
         String uuid = UUID.randomUUID().toString();
         for (int i = 0; i < destList.size(); i++) {
             byte[] destByte = destList.get(i);
