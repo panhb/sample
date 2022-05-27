@@ -5,7 +5,8 @@
 	<modules>
 		<module>web</module>
         <module>core</module>
-    </modules>
+		<module>wkhtml</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -21,6 +22,9 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<hutool-all.version>5.8.1</hutool-all.version>
+		<guava.version>31.1-jre</guava.version>
+		<slf4j.version>2.0.0-alpha7</slf4j.version>
 	</properties>
 
 	<dependencies>
@@ -33,6 +37,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>${hutool-all.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
 		</dependency>
 	</dependencies>
 </project>
