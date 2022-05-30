@@ -11,6 +11,7 @@ import com.sample.wkhtml.config.WkhtmlConfig;
 import com.sample.wkhtml.enums.WkhtmlType;
 import com.sample.wkhtml.exceptions.WkhtmlException;
 import com.sample.wkhtml.model.Execute;
+import com.sample.wkhtml.model.Option;
 import com.sample.wkhtml.model.Page;
 import lombok.SneakyThrows;
 import lombok.extern.java.Log;
@@ -59,7 +60,8 @@ public class Wkhtml {
 
     public static void main(String[] args) {
         Execute execute = Execute.builder()
-                .pages(Lists.newArrayList(Page.file("C:\\Users\\hongbo.pan\\Desktop\\goodnews.html")))
+                .options(Lists.newArrayList(Option.dpi(120)))
+                .pages(Lists.newArrayList(Page.forFile("C:\\Users\\hongbo.pan\\Desktop\\goodnews.html")))
                 .outFilePath("C:\\Users\\hongbo.pan\\Desktop\\2.pdf").build();
         toPdf(execute);
         execute.setOutFilePath("C:\\Users\\hongbo.pan\\Desktop\\2.jpg");
