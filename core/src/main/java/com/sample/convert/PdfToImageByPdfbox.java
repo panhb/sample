@@ -4,6 +4,7 @@ import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.lang.UUID;
 import cn.hutool.core.thread.ThreadUtil;
 import com.google.common.collect.Lists;
+import com.sample.convert.enums.FileType;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
 import org.apache.pdfbox.Loader;
@@ -35,6 +36,16 @@ public class PdfToImageByPdfbox extends AbstractConvertFile {
             300, TimeUnit.SECONDS, new ArrayBlockingQueue<>(100),
             ThreadUtil.newNamedThreadFactory("pdfbox-", true));
 
+
+    @Override
+    protected FileType sourceFileType() {
+        return FileType.PDF;
+    }
+
+    @Override
+    protected FileType destFileType() {
+        return FileType.IMAGE;
+    }
 
     @SneakyThrows
     @Override

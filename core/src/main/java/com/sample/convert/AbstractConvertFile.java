@@ -1,6 +1,7 @@
 package com.sample.convert;
 
 import cn.hutool.crypto.digest.MD5;
+import com.sample.convert.enums.FileType;
 
 import java.util.List;
 
@@ -9,6 +10,18 @@ import java.util.List;
  * @date 2022/5/24
  */
 public abstract class AbstractConvertFile {
+
+    /**
+     * sourceFileType
+     * @return
+     */
+    protected abstract FileType sourceFileType();
+
+    /**
+     * destFileType
+     * @return
+     */
+    protected abstract FileType destFileType();
 
     /**
      * 转换文件

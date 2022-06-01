@@ -18,6 +18,7 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.BlockElement;
 import com.itextpdf.layout.element.IElement;
 import com.itextpdf.layout.font.FontProvider;
+import com.sample.convert.enums.FileType;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
 
@@ -30,6 +31,16 @@ import java.util.List;
  * @date 2022/5/24
  */
 public class HtmlToPdfByItext extends AbstractConvertFile {
+
+    @Override
+    protected FileType sourceFileType() {
+        return FileType.HTML;
+    }
+
+    @Override
+    protected FileType destFileType() {
+        return FileType.PDF;
+    }
 
     @SneakyThrows
     @Override

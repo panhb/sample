@@ -3,6 +3,7 @@ package com.sample.convert;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.lang.UUID;
 import com.google.common.collect.Lists;
+import com.sample.convert.enums.FileType;
 import com.sample.wkhtml.Wkhtml;
 import com.sample.wkhtml.model.Execute;
 import com.sample.wkhtml.model.Page;
@@ -16,6 +17,16 @@ import java.util.List;
  * @date 2022/5/24
  */
 public class HtmlToPdfByWkhtml extends AbstractConvertFile {
+
+    @Override
+    protected FileType sourceFileType() {
+        return FileType.HTML;
+    }
+
+    @Override
+    protected FileType destFileType() {
+        return FileType.PDF;
+    }
 
     @SneakyThrows
     @Override
